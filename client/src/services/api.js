@@ -12,7 +12,7 @@ const api = axios.create({
 
 export const generateHashtags = async (keyword) => {
   try {
-    const response = await api.post('/api/hashtags/generate', { keyword });
+    const response = await api.post('/hashtags/generate', { keyword });
     return response.data;
   } catch (error) {
     if (error.response) {
@@ -27,9 +27,11 @@ export const generateHashtags = async (keyword) => {
 
 export const getTrendingHashtags = async () => {
   try {
-    const response = await api.get('/api/hashtags/trending');
+    const response = await api.get('/hashtags/trending');
     return response.data;
   } catch (error) {
     throw new Error(error.response?.data?.message || 'Error fetching trending hashtags');
   }
-}; 
+};
+
+export default api; 
