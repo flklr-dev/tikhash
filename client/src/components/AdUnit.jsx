@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-function AdUnit({ slot, format = 'auto' }) {
+function AdUnit({ slot, format = 'auto', className = '' }) {
   const adRef = useRef(null);
   const isLoaded = useRef(false);
 
@@ -14,18 +14,17 @@ function AdUnit({ slot, format = 'auto' }) {
       }
     }
 
-    // Cleanup function
     return () => {
       isLoaded.current = false;
     };
   }, []);
 
   return (
-    <div className="ad-container my-4">
+    <div className={`ad-container p-2 bg-white rounded-lg shadow-sm ${className}`}>
       <ins
         ref={adRef}
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ display: 'block', minHeight: '100px' }}
         data-ad-client="pub-4442939390084208"
         data-ad-slot={slot}
         data-ad-format={format}

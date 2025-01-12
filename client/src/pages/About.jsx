@@ -41,9 +41,8 @@ function About() {
           <div className="text-gray-600">
             <p>For any questions or support, reach out to us at:</p>
             <p className="mt-2">
-              Email: [Your Email]<br />
-              Twitter: [@YourHandle]<br />
-              Instagram: [@YourHandle]
+              Email: theedevkit@gmail.com<br />
+
             </p>
           </div>
         </section>
