@@ -6,6 +6,7 @@ import HashtagResults from './components/HashtagResults'
 import { generateHashtags } from './services/api'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import About from './pages/About'
+import Disclaimer from './pages/Disclaimer'
 
 function App() {
   const [hashtags, setHashtags] = useState([])
@@ -47,6 +48,7 @@ function App() {
         } />
         <Route path="/privacy" element={<Layout><PrivacyPolicy /></Layout>} />
         <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/disclaimer" element={<Layout><Disclaimer /></Layout>} />
       </Routes>
     </Router>
   )

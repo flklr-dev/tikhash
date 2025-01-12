@@ -1,68 +1,65 @@
 function PrivacyPolicy() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-      
-      <div className="space-y-6">
-        <section>
-          <h2 className="text-xl font-semibold mb-3">1. Information We Collect</h2>
-          <p className="text-gray-600">
-            We collect information that you provide directly to us when using our TikTok Hashtag Generator service, including:
-            - Keywords and topics you enter for hashtag generation
-            - Usage data and interaction with our service
-          </p>
-        </section>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="bg-white shadow-sm rounded-lg p-6 sm:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
+        
+        <div className="space-y-6 text-gray-600">
+          <section>
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Information We Collect</h2>
+            <p>When you use TikTok Hashtag Generator, we collect:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>Keywords you enter for hashtag generation</li>
+              <li>Device information (browser type, device type)</li>
+              <li>Usage data (features used, time spent on site)</li>
+            </ul>
+          </section>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-3">2. How We Use Your Information</h2>
-          <p className="text-gray-600">
-            We use the information we collect to:
-            - Provide and improve our hashtag generation service
-            - Analyze usage patterns to enhance user experience
-            - Maintain and optimize our website performance
-          </p>
-        </section>
+          <section>
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">2. How We Use Your Information</h2>
+            <p>We use collected information to:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>Generate relevant hashtags for your content</li>
+              <li>Improve our service and user experience</li>
+              <li>Analyze usage patterns and optimize performance</li>
+            </ul>
+          </section>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-3">3. Cookies and Tracking</h2>
-          <p className="text-gray-600">
-            We use cookies and similar tracking technologies to track activity on our service and hold certain information. 
-            Cookies are files with small amount of data which may include an anonymous unique identifier.
-          </p>
-        </section>
+          <section>
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">3. Cookies and Tracking</h2>
+            <p>We use cookies and similar technologies to:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>Remember your preferences</li>
+              <li>Analyze site traffic and usage</li>
+              <li>Personalize content and ads</li>
+            </ul>
+          </section>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-3">4. Google AdSense</h2>
-          <p className="text-gray-600">
-            We use Google AdSense to display advertisements. Google AdSense uses cookies to serve ads based on your visits 
-            to our site and other sites on the Internet. You can opt out of personalized advertising by visiting 
-            <a href="https://www.google.com/settings/ads" className="text-blue-600 hover:underline"> Google Ads Settings</a>.
-          </p>
-        </section>
+          <section>
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">4. Third-Party Services</h2>
+            <p>We use the following third-party services:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>Google Analytics for usage tracking</li>
+              <li>Google AdSense for advertising</li>
+            </ul>
+          </section>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-3">5. Data Security</h2>
-          <p className="text-gray-600">
-            The security of your data is important to us, but remember that no method of transmission over the Internet 
-            or method of electronic storage is 100% secure.
-          </p>
-        </section>
+          <section>
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">5. Data Security</h2>
+            <p>We implement security measures to protect your information, including:</p>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>SSL encryption for all data transfers</li>
+              <li>Regular security updates and monitoring</li>
+              <li>Limited access to personal information</li>
+            </ul>
+          </section>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-3">6. Changes to This Privacy Policy</h2>
-          <p className="text-gray-600">
-            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new 
-            Privacy Policy on this page.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold mb-3">7. Contact Us</h2>
-          <p className="text-gray-600">
-            If you have any questions about this Privacy Policy, please contact us at:
-            [Your Contact Information]
-          </p>
-        </section>
+          <section>
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">6. Contact Us</h2>
+            <p>For questions about this privacy policy, please contact us at:</p>
+            <p className="mt-2">Email: theedevkit@gmail.com</p>
+          </section>
+        </div>
       </div>
     </div>
   );

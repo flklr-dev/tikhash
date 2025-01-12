@@ -74,7 +74,7 @@ function HashtagForm({ onGenerate, onShowResults }) {
           </div>
           <div className="ml-3">
             <p className="text-sm text-yellow-700">
-              Note: Due to free-tier hosting, initial requests may take up to 50 seconds if the service is inactive.
+              Note: Initial requests may take up to 50 seconds.
               {timeLeft > 0 && (
                 <span className="block font-medium mt-1">
                   Next generation available in: {formatTime(timeLeft)}
