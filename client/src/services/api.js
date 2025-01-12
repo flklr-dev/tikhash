@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 const api = axios.create({
   baseURL: API_URL,
@@ -12,11 +12,11 @@ const api = axios.create({
 
 export const generateHashtags = async (keyword) => {
   try {
-    const response = await api.post('/hashtags/generate', { keyword });
+    const response = await api.post('/api/hashtags/generate', { keyword });
     return response.data;
   } catch (error) {
     if (error.response) {
-      throw error.response.data;
+      throw new Error(error.response.data.message || 'Server error');
     } else if (error.request) {
       throw new Error('Network error - please check your connection');
     } else {
@@ -27,9 +27,9 @@ export const generateHashtags = async (keyword) => {
 
 export const getTrendingHashtags = async () => {
   try {
-    const response = await api.get('/hashtags/trending');
+    const response = await api.get('/api/hashtags/trending');
     return response.data;
   } catch (error) {
-    throw error.response?.data || error.message;
+    throw new Error(error.response?.data?.message || 'Error fetching trending hashtags');
   }
 }; 

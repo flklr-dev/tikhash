@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
+let isPageLevelAdsEnabled = false;
+
 function AdUnit({ slot, format = 'auto', className = '' }) {
   const adRef = useRef(null);
   const containerRef = useRef(null);
@@ -13,20 +15,21 @@ function AdUnit({ slot, format = 'auto', className = '' }) {
       }
     };
 
-    // Initial size
     updateSize();
-
-    // Update size on window resize
     window.addEventListener('resize', updateSize);
     
-    // Initialize ad after container width is set
     if (containerWidth > 0) {
       try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "pub-4442939390084208",
-          enable_page_level_ads: true,
-          callback: () => setIsAdLoaded(true)
-        });
+        if (!isPageLevelAdsEnabled) {
+          (window.adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "pub-4442939390084208",
+            enable_page_level_ads: true
+          });
+          isPageLevelAdsEnabled = true;
+        }
+        
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        setIsAdLoaded(true);
       } catch (error) {
         console.error('AdSense error:', error);
       }
