@@ -35,7 +35,11 @@ function HashtagResults({ hashtags }) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="mt-8 space-y-6">
+      <div className="bg-white shadow-sm rounded-lg p-4">
+        <AdUnit slot="3960303742" format="horizontal" />
+      </div>
+
       <div className="bg-white shadow-md rounded-lg p-4 sm:p-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-6">
           <h2 className="text-xl font-bold text-gray-900">Generated Hashtags</h2>
@@ -87,7 +91,7 @@ function HashtagResults({ hashtags }) {
       </div>
       
       <div className="bg-white shadow-sm rounded-lg p-4">
-        <AdUnit slot="results-bottom" format="horizontal" className="mx-auto" />
+        <AdUnit slot="2481637045" format="horizontal" />
       </div>
     </div>
   );

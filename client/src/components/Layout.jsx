@@ -35,8 +35,18 @@ function Layout({ children }) {
         </div>
       </header>
 
+      {/* Add top ad */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <AdUnit slot="5839837144" format="horizontal" />
+      </div>
+
       {/* Main content */}
       <main className="flex-grow">{children}</main>
+
+      {/* Add bottom ad */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <AdUnit slot="7318570341" format="horizontal" />
+      </div>
 
       <footer className="bg-white mt-8 border-t border-gray-200">
         <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
@@ -64,7 +74,7 @@ function Layout({ children }) {
             <div>
               <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Contact</h3>
               <ul className="mt-4 space-y-2">
-                <li className="text-base text-gray-500">Email: support@tikhash.com</li>
+                <li className="text-base text-gray-500">Email: theedevkit@gmail.com</li>
                 <li className="text-base text-gray-500">Follow us on TikTok</li>
               </ul>
             </div>
