@@ -8,6 +8,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import About from './pages/About'
 import Disclaimer from './pages/Disclaimer'
 import Terms from './pages/Terms'
+import Home from './components/Home'
 
 function App() {
   const [hashtags, setHashtags] = useState([])
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <Layout>
+            <Home />
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
               <HashtagForm 
                 onGenerate={handleGenerate} 

@@ -36,6 +36,16 @@ function HashtagResults({ hashtags }) {
 
   return (
     <div className="mt-8 space-y-6">
+      <div className="bg-white shadow-sm rounded-lg p-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Hashtag Best Practices</h2>
+        <ul className="space-y-2 text-gray-600 mb-6">
+          <li>• Use a mix of popular and niche hashtags</li>
+          <li>• Don't exceed 30 hashtags per post</li>
+          <li>• Keep hashtags relevant to your content</li>
+          <li>• Research trending hashtags in your niche</li>
+        </ul>
+      </div>
+
       <div className="bg-white shadow-sm rounded-lg p-4">
         <AdUnit 
           slot="3960303742" 
@@ -44,9 +54,9 @@ function HashtagResults({ hashtags }) {
         />
       </div>
 
-      <div className="bg-white shadow-md rounded-lg p-4 sm:p-6">
+      <div className="bg-white shadow-sm rounded-lg p-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Generated Hashtags</h2>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-6">
-          <h2 className="text-xl font-bold text-gray-900">Generated Hashtags</h2>
           <div className="flex flex-wrap gap-2 w-full sm:w-auto">
             <button
               onClick={copyAllHashtags}
@@ -94,6 +104,16 @@ function HashtagResults({ hashtags }) {
         </div>
       </div>
       
+      <div className="bg-white shadow-sm rounded-lg p-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Tips for Success</h2>
+        <div className="space-y-4 text-gray-600">
+          <p>• Test different hashtag combinations</p>
+          <p>• Monitor which hashtags perform best</p>
+          <p>• Update your hashtag strategy regularly</p>
+          <p>• Engage with content using your target hashtags</p>
+        </div>
+      </div>
+
       <div className="bg-white shadow-sm rounded-lg p-4">
         <AdUnit 
           slot="2481637045" 
