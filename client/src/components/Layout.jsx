@@ -26,10 +26,10 @@ function Layout({ children }) {
               TikTok Hashtag Generator
             </Link>
             <nav className="flex flex-wrap gap-4 text-sm sm:text-base">
+              <Link to="/tips" className="text-gray-600 hover:text-blue-600 transition-colors">Tips</Link>
               <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</Link>
               <Link to="/terms" className="text-gray-600 hover:text-blue-600 transition-colors">Terms</Link>
               <Link to="/privacy" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy</Link>
-              <Link to="/disclaimer" className="text-gray-600 hover:text-blue-600 transition-colors">Disclaimer</Link>
             </nav>
           </div>
         </div>
@@ -63,6 +63,17 @@ function Layout({ children }) {
       <footer className="bg-white mt-8 border-t border-gray-200">
         <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Resources</h3>
+              <ul className="mt-4 space-y-2">
+                <li>
+                  <Link to="/tips" className="text-base text-gray-500 hover:text-gray-900">Hashtag Tips</Link>
+                </li>
+                <li>
+                  <Link to="/about" className="text-base text-gray-500 hover:text-gray-900">About Us</Link>
+                </li>
+              </ul>
+            </div>
             <div>
               <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">About</h3>
               <p className="mt-4 text-base text-gray-500">
