@@ -21,12 +21,13 @@ function Layout({ children }) {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto py-3 sm:py-4 px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <Link to="/" className="text-2xl sm:text-3xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
               TikTok Hashtag Generator
             </Link>
-            <nav className="space-x-4 sm:space-x-6 text-sm sm:text-base">
+            <nav className="flex flex-wrap gap-4 text-sm sm:text-base">
               <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</Link>
+              <Link to="/terms" className="text-gray-600 hover:text-blue-600 transition-colors">Terms</Link>
               <Link to="/privacy" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy</Link>
               <Link to="/disclaimer" className="text-gray-600 hover:text-blue-600 transition-colors">Disclaimer</Link>
             </nav>
@@ -34,40 +35,44 @@ function Layout({ children }) {
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto py-4 sm:py-6">
-        <div className="lg:grid lg:grid-cols-4 lg:gap-8">
-          <div className="lg:col-span-3 px-4 sm:px-6 lg:px-8">
-            <main>{children}</main>
-            
-            {/* Mobile-only ad - only shows when sidebar is hidden */}
-            {!showSidebarAds && (
-              <div className="mt-8">
-                <AdUnit slot="mobile-ad" format="horizontal" />
-              </div>
-            )}
-          </div>
-
-          {/* Sidebar with ad */}
-          {showSidebarAds && (
-            <div className="hidden lg:block px-4 sm:px-6 lg:px-8">
-              <div className="sticky top-24">
-                <AdUnit slot="sidebar-ad" format="vertical" />
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
+      {/* Main content */}
+      <main className="flex-grow">{children}</main>
 
       <footer className="bg-white mt-8 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
-          <AdUnit slot="footer-ad" format="horizontal" className="mb-6" />
-          <div className="text-center text-sm text-gray-500">
-            <p className="mb-2">© {new Date().getFullYear()} TikTok Hashtag Generator. All rights reserved.</p>
-            <div className="space-x-4">
-              <Link to="/privacy" className="hover:text-gray-700">Privacy Policy</Link>
-              <Link to="/disclaimer" className="hover:text-gray-700">Disclaimer</Link>
-              <Link to="/about" className="hover:text-gray-700">About Us</Link>
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">About</h3>
+              <p className="mt-4 text-base text-gray-500">
+                TikTok Hashtag Generator helps content creators maximize their reach with relevant, trending hashtags.
+              </p>
             </div>
+            <div>
+              <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Legal</h3>
+              <ul className="mt-4 space-y-2">
+                <li>
+                  <Link to="/terms" className="text-base text-gray-500 hover:text-gray-900">Terms of Service</Link>
+                </li>
+                <li>
+                  <Link to="/privacy" className="text-base text-gray-500 hover:text-gray-900">Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link to="/disclaimer" className="text-base text-gray-500 hover:text-gray-900">Disclaimer</Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Contact</h3>
+              <ul className="mt-4 space-y-2">
+                <li className="text-base text-gray-500">Email: support@tikhash.com</li>
+                <li className="text-base text-gray-500">Follow us on TikTok</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-gray-200 pt-8 text-center">
+            <p className="text-base text-gray-400">
+              © {new Date().getFullYear()} TikTok Hashtag Generator. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
