@@ -35,17 +35,29 @@ function Layout({ children }) {
         </div>
       </header>
 
-      {/* Add top ad */}
+      {/* Top ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <AdUnit slot="5839837144" format="horizontal" />
+        <div className="bg-white shadow-sm rounded-lg p-4">
+          <AdUnit 
+            slot="5839837144" 
+            format="horizontal" 
+            className="min-h-[90px] flex items-center justify-center"
+          />
+        </div>
       </div>
 
       {/* Main content */}
       <main className="flex-grow">{children}</main>
 
-      {/* Add bottom ad */}
+      {/* Bottom ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <AdUnit slot="7318570341" format="horizontal" />
+        <div className="bg-white shadow-sm rounded-lg p-4">
+          <AdUnit 
+            slot="7318570341" 
+            format="horizontal" 
+            className="min-h-[90px] flex items-center justify-center"
+          />
+        </div>
       </div>
 
       <footer className="bg-white mt-8 border-t border-gray-200">

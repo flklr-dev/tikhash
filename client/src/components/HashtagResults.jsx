@@ -37,7 +37,11 @@ function HashtagResults({ hashtags }) {
   return (
     <div className="mt-8 space-y-6">
       <div className="bg-white shadow-sm rounded-lg p-4">
-        <AdUnit slot="3960303742" format="horizontal" />
+        <AdUnit 
+          slot="3960303742" 
+          format="horizontal" 
+          className="min-h-[90px] flex items-center justify-center"
+        />
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-4 sm:p-6">
@@ -91,7 +95,11 @@ function HashtagResults({ hashtags }) {
       </div>
       
       <div className="bg-white shadow-sm rounded-lg p-4">
-        <AdUnit slot="2481637045" format="horizontal" />
+        <AdUnit 
+          slot="2481637045" 
+          format="horizontal" 
+          className="min-h-[90px] flex items-center justify-center"
+        />
       </div>
     </div>
   );
