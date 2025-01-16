@@ -1,7 +1,12 @@
+import PageHeader from '../components/PageHeader';
+
 function Resources() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">TikTok Growth Resources</h1>
+      <PageHeader 
+        title="TikTok Growth Resources"
+        subtitle="Tools and resources to help you grow on TikTok"
+      />
       
       <div className="grid gap-8 md:grid-cols-2">
         <section className="bg-white rounded-lg shadow-sm p-6">

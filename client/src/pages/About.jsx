@@ -1,9 +1,14 @@
+import PageHeader from '../components/PageHeader';
+
 function About() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <PageHeader 
+        title="About TikTok Hashtag Generator"
+        subtitle="Learn more about our mission and services"
+      />
+      
       <div className="bg-white shadow-sm rounded-lg p-6 sm:p-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">About TikTok Hashtag Generator</h1>
-        
         <div className="space-y-6 text-gray-600">
           <section>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">Our Mission</h2>

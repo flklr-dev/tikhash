@@ -1,9 +1,14 @@
+import PageHeader from '../components/PageHeader';
+
 function PrivacyPolicy() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <PageHeader 
+        title="Privacy Policy"
+        subtitle="How we handle and protect your information"
+      />
+      
       <div className="bg-white shadow-sm rounded-lg p-6 sm:p-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
-        
         <div className="space-y-6 text-gray-600">
           <section>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Information We Collect</h2>

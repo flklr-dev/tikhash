@@ -1,7 +1,12 @@
+import PageHeader from '../components/PageHeader';
+
 function Tips() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">TikTok Hashtag Tips & Strategies</h1>
+      <PageHeader 
+        title="TikTok Hashtag Tips & Strategies"
+        subtitle="Learn how to optimize your hashtag usage for better reach"
+      />
       
       <div className="space-y-8">
         <section className="bg-white rounded-lg shadow-sm p-6">
