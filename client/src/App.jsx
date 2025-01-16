@@ -10,6 +10,7 @@ import Disclaimer from './pages/Disclaimer'
 import Terms from './pages/Terms'
 import Home from './components/Home'
 import Tips from './pages/Tips'
+import Blog from './pages/Blog'
 
 function App() {
   const [hashtags, setHashtags] = useState([])
@@ -55,6 +56,7 @@ function App() {
         <Route path="/disclaimer" element={<Layout><Disclaimer /></Layout>} />
         <Route path="/terms" element={<Layout><Terms /></Layout>} />
         <Route path="/tips" element={<Layout><Tips /></Layout>} />
+        <Route path="/blog" element={<Layout><Blog /></Layout>} />
       </Routes>
     </Router>
   )

@@ -30,6 +30,7 @@ function Layout({ children }) {
               <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</Link>
               <Link to="/terms" className="text-gray-600 hover:text-blue-600 transition-colors">Terms</Link>
               <Link to="/privacy" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy</Link>
+              <Link to="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
             </nav>
           </div>
         </div>
@@ -37,13 +38,18 @@ function Layout({ children }) {
 
       {/* Top ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="bg-white shadow-sm rounded-lg p-4">
-          <AdUnit 
-            slot="5839837144" 
-            format="horizontal" 
-            className="min-h-[90px] flex items-center justify-center"
-          />
+        <div className="bg-white shadow-sm rounded-lg p-6 mb-4">
+          <h2 className="text-xl font-semibold mb-3">Welcome to TikTok Hashtag Generator</h2>
+          <p className="text-gray-600">
+            Generate trending hashtags to boost your TikTok content visibility and engagement.
+            Our AI-powered tool analyzes current trends to provide you with the most relevant hashtags.
+          </p>
         </div>
+        <AdUnit 
+          slot="5839837144" 
+          format="horizontal" 
+          className="min-h-[90px] flex items-center justify-center"
+        />
       </div>
 
       {/* Main content */}
@@ -51,13 +57,18 @@ function Layout({ children }) {
 
       {/* Bottom ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="bg-white shadow-sm rounded-lg p-4">
-          <AdUnit 
-            slot="7318570341" 
-            format="horizontal" 
-            className="min-h-[90px] flex items-center justify-center"
-          />
+        <div className="bg-white shadow-sm rounded-lg p-6 mb-4">
+          <h2 className="text-xl font-semibold mb-3">Optimize Your TikTok Strategy</h2>
+          <p className="text-gray-600">
+            Learn more about TikTok growth strategies in our blog. We regularly publish tips, 
+            trends, and insights to help you succeed on TikTok.
+          </p>
         </div>
+        <AdUnit 
+          slot="7318570341" 
+          format="horizontal" 
+          className="min-h-[90px] flex items-center justify-center"
+        />
       </div>
 
       <footer className="bg-white mt-8 border-t border-gray-200">
