@@ -66,13 +66,21 @@ function HashtagForm({ onGenerate, onShowResults }) {
     setTimeout(() => {
       const resultsElement = document.getElementById('hashtag-results');
       if (resultsElement) {
-        // Calculate offset for fixed header
-        const headerOffset = 80; // Adjust this value based on your header height
+        // Calculate offset for fixed header (adjust this value based on your header height)
+        const headerOffset = 100;
+        
+        // Get the element's position relative to the viewport
         const elementPosition = resultsElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        // Get the current scroll position
+        const currentPosition = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Calculate the target scroll position
+        const targetPosition = currentPosition + elementPosition - headerOffset;
 
+        // Perform the scroll
         window.scrollTo({
-          top: offsetPosition,
+          top: targetPosition,
           behavior: 'smooth'
         });
 
@@ -80,9 +88,9 @@ function HashtagForm({ onGenerate, onShowResults }) {
         resultsElement.classList.add('highlight-results');
         setTimeout(() => {
           resultsElement.classList.remove('highlight-results');
-        }, 1500); // Duration of highlight animation
+        }, 1500);
       }
-    }, 300); // Delay for modal close animation
+    }, 100); // Reduced delay for better responsiveness
   };
 
   return (
