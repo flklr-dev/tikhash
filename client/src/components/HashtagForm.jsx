@@ -66,8 +66,8 @@ function HashtagForm({ onGenerate, onShowResults }) {
     setTimeout(() => {
       const resultsElement = document.getElementById('hashtag-results');
       if (resultsElement) {
-        // Calculate offset for fixed header (adjust this value based on your header height)
-        const headerOffset = 100;
+        // Reduced header offset for better positioning
+        const headerOffset = -100;
         
         // Get the element's position relative to the viewport
         const elementPosition = resultsElement.getBoundingClientRect().top;
@@ -90,7 +90,7 @@ function HashtagForm({ onGenerate, onShowResults }) {
           resultsElement.classList.remove('highlight-results');
         }, 1500);
       }
-    }, 100); // Reduced delay for better responsiveness
+    }, 100);
   };
 
   return (
