@@ -66,17 +66,16 @@ function HashtagForm({ onGenerate, onShowResults }) {
     setTimeout(() => {
       const resultsElement = document.getElementById('hashtag-results');
       if (resultsElement) {
-        // Reduced header offset for better positioning
-        const headerOffset = -100;
+        // Get the viewport height
+        const viewportHeight = window.innerHeight;
         
-        // Get the element's position relative to the viewport
-        const elementPosition = resultsElement.getBoundingClientRect().top;
+        // Get the element's position and dimensions
+        const elementRect = resultsElement.getBoundingClientRect();
         
-        // Get the current scroll position
-        const currentPosition = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Calculate the target scroll position
-        const targetPosition = currentPosition + elementPosition - headerOffset;
+        // Calculate the scroll position to center the element
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const elementTop = scrollTop + elementRect.top;
+        const targetPosition = elementTop - (viewportHeight - elementRect.height) / 2;
 
         // Perform the scroll
         window.scrollTo({
