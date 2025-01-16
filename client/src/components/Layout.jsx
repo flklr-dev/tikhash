@@ -31,6 +31,7 @@ function Layout({ children }) {
               <Link to="/terms" className="text-gray-600 hover:text-blue-600 transition-colors">Terms</Link>
               <Link to="/privacy" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy</Link>
               <Link to="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
+              <Link to="/resources" className="text-gray-600 hover:text-blue-600 transition-colors">Resources</Link>
             </nav>
           </div>
         </div>

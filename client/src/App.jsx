@@ -11,6 +11,8 @@ import Terms from './pages/Terms'
 import Home from './components/Home'
 import Tips from './pages/Tips'
 import Blog from './pages/Blog'
+import Resources from './pages/Resources'
+import BlogPost from './pages/BlogPost'
 
 function App() {
   const [hashtags, setHashtags] = useState([])
@@ -57,6 +59,8 @@ function App() {
         <Route path="/terms" element={<Layout><Terms /></Layout>} />
         <Route path="/tips" element={<Layout><Tips /></Layout>} />
         <Route path="/blog" element={<Layout><Blog /></Layout>} />
+        <Route path="/resources" element={<Layout><Resources /></Layout>} />
+        <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
       </Routes>
     </Router>
   )
