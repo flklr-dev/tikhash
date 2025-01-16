@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import AdUnit from './AdUnit';
 
 function HashtagForm({ onGenerate, onShowResults }) {
@@ -13,6 +13,7 @@ function HashtagForm({ onGenerate, onShowResults }) {
     }
     return 0;
   });
+  const resultsRef = useRef(null);
 
   useEffect(() => {
     let timer;
@@ -60,6 +61,28 @@ function HashtagForm({ onGenerate, onShowResults }) {
   const handleCloseAd = () => {
     setShowAdModal(false);
     onShowResults();
+    
+    // Wait for modal to close and results to render
+    setTimeout(() => {
+      const resultsElement = document.getElementById('hashtag-results');
+      if (resultsElement) {
+        // Calculate offset for fixed header
+        const headerOffset = 80; // Adjust this value based on your header height
+        const elementPosition = resultsElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        // Add highlight animation
+        resultsElement.classList.add('highlight-results');
+        setTimeout(() => {
+          resultsElement.classList.remove('highlight-results');
+        }, 1500); // Duration of highlight animation
+      }
+    }, 300); // Delay for modal close animation
   };
 
   return (

@@ -35,12 +35,15 @@ function HashtagResults({ hashtags }) {
   };
 
   return (
-    <div className="mt-8 space-y-6">
+    <div 
+      id="hashtag-results" 
+      className="mt-8 space-y-6 scroll-mt-20 transition-all duration-500"
+    >
       <div className="bg-white shadow-sm rounded-lg p-6">
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Hashtag Best Practices</h2>
         <ul className="space-y-2 text-gray-600 mb-6">
           <li>• Use a mix of popular and niche hashtags</li>
-          <li>• Don't exceed 30 hashtags per post</li>
+          <li>• Don&apos;t exceed 30 hashtags per post</li>
           <li>• Keep hashtags relevant to your content</li>
           <li>• Research trending hashtags in your niche</li>
         </ul>
